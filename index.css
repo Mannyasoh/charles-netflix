@@ -1,0 +1,274 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  margin: 0;
+  font-family: circular, Helvetica, sans-serif;
+  background-color: #141414;
+  color: #fff;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 20px; */
+  background-color: rgba(20, 20, 20, 1);
+  position: fixed;
+  top: 0px;
+  margin-left: -50px;
+  min-width: 100%;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.header.transparent {
+  background-color: rgba(20, 20, 20, 0.1);
+}
+
+.logo {
+  width: 100px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: -14rem;
+}
+
+.user-profile img {
+  width: 30px;
+  border-radius: 5px;
+}
+
+.hero {
+  background: url("/assets/main.webp") no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 50px;
+  text-align: left;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  max-width: 500px;
+}
+
+.btn {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.play-btn {
+  background-color: #fff;
+  color: #000;
+  margin-left: 1rem;
+}
+
+.info-btn {
+  background-color: #333;
+  color: #fff;
+}
+
+.main-content {
+  /* padding-top: 20px; */
+}
+
+.row {
+  margin: 0px 0;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 0 20px;
+}
+.row h2 {
+  margin: 20px;
+}
+
+.row-content {
+  display: inline-flex;
+  gap: 10px;
+  padding: 0 20px;
+  width: max-content;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  /* overflow-x: auto; */
+}
+
+.row-content1 {
+  display: inline-flex;
+  gap: 10px;
+  padding: 0 20px;
+  width: max-content;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  /* overflow-x: auto; */
+}
+
+.row1 {
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 0 20px;
+  position: relative;
+}
+
+.row1::-webkit-scrollbar,
+.row-content1::-webkit-scrollbar {
+  height: 8px;
+}
+
+.row1::-webkit-scrollbar-thumb,
+.row-content1::-webkit-scrollbar-thumb {
+  background-color: #333;
+  border-radius: 4px;
+}
+
+.row1::-webkit-scrollbar-thumb:hover,
+.row-content1::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+.row1-webkit-scrollbar-track,
+.row-content1::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.row::-webkit-scrollbar,
+.row-content::-webkit-scrollbar {
+  height: 8px;
+}
+
+.row::-webkit-scrollbar-thumb,
+.row-content::-webkit-scrollbar-thumb {
+  background-color: #333;
+  border-radius: 4px;
+}
+
+.row::-webkit-scrollbar-thumb:hover,
+.row-content::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+.row-webkit-scrollbar-track,
+.row-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.indicator {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 4px;
+  background-color: red;
+  transition: left 0.3s ease, width 0.3s ease;
+}
+
+.row-content img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.row-content1 img {
+  width: 341px;
+  height: 192px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.search-input {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+}
+
+.search-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.show .search-input {
+  display: block;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  background-color: rgba(20, 20, 20, 0);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: white;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  min-width: 8rem;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #555;
+}
